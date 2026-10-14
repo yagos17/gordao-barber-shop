@@ -84,9 +84,12 @@ body {
 
 nav {
     position: fixed;
-    isolation: isolate;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 9;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .nav__header {
@@ -95,48 +98,104 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: var(--white);
+    position: relative;
+    z-index: 10;
 }
 
 .nav__logo a {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: var(--text-dark);
 }
 
 .nav__menu__btn {
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--text-dark);
     cursor: pointer;
 }
 
 .nav__links {
-    position: absolute;
-    bottom: 0;
+    position: absolute; 
+    top: 100%;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem;
-    background-color: var(--primary-color);
-    transition: transform 0.5s;
-    z-index: -1;
-    transform: translateY(-100%);
+    background-color: var(--white);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 9; 
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none; 
 }
 
 .nav__links.open { 
-    transform: translateY(0); 
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .nav__links a {
     font-weight: 500;
-    color: var(--white);
+    color: var(--text-dark);
     white-space: nowrap;
 }
 
 .nav__links a:hover {
-    color: var(--text-dark);
+    color: var(--primary-color);
+}
+
+
+@media (min-width: 992px) {
+    nav {
+        background-color: transparent; 
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav__header {
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+    }
+
+    .nav__logo a {
+        color: var(--text-dark);
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .nav__links a {
+        color: var(--text-dark);
+    }
+
+    .nav__links a:hover {
+        color: var(--primary-color);
+    }
 }
