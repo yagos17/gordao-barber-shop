@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Gordao BarberShop</title>
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="nav__header">
             <div class="nav__logo">
-                <a href="#">BARBERSHOP</a>
+                <a href="#inicio">BARBERSHOP</a>
             </div>
-            <div class="nav__menu__btn" id="menu-btn">
+
+            <button class="nav__menu__btn" id="menu-btn" aria-label="Abrir menu">
                 <i class="ri-menu-line"></i>
-            </div>
+            </button>
         </div>
+
         <ul class="nav__links" id="nav-links">
             <li><a href="#inicio">INÍCIO</a></li>
             <li><a href="#servicos">SERVIÇOS</a></li>
@@ -26,46 +30,162 @@
             <li><a href="#horarios">MEUS HORÁRIOS</a></li>
             <li><a href="#perfil">PERFIL</a></li>
             <li>
-                <button class="btn">CADASTRAR-SE</button>
+                <a href="#cadastro" class="btn btn--small">CADASTRAR-SE</a>
             </li>
         </ul>
     </nav>
 
-    <header class="section__container hero__container" id="inicio">
-        <div class="hero__content">
-            <p class="section__subheader">BARBEARIA PREMIUM</p>
-            <h1 class="hero__title">
-                SEU ESTILO.<br />
-                NO SEU TEMPO.
-            </h1>
-            <p class="hero__description">
-                Cortes, barba e cuidados para quem valoriza a própria imagem.
-            </p>
-            <div class="hero__btn">
-                <a href="#agendar" class="btn btn__primary">
-                    AGENDAR HORÁRIO <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-            <div class="hero__features">
-                <div class="feature__card">
-                    <i class="ri-user-line"></i>
-                    <span>Profissionais experientes</span>
-                </div>
-                <div class="feature__card">
-                    <i class="ri-shield-check-line"></i>
-                    <span>Ambiente seguro e confortável</span>
-                </div>
-                <div class="feature__card">
-                    <i class="ri-star-line"></i>
-                    <span>Qualidade em cada detalhe</span>
-                </div>
-            </div>
-        </div>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <p class="eyebrow">BARBEARIA PREMIUM</p>
 
-        <div class="hero__image">
-            <img src="assets/images/hero-barber.png" alt="Barbeiro cortando cabelo">
-        </div>
-    </header>
+                    <h1>
+                        SEU ESTILO.<br>
+                        NO SEU TEMPO.
+                    </h1>
+
+                    <p class="hero__description">
+                        Cortes, barba e cuidados para quem valoriza a própria imagem.
+                    </p>
+
+                    <a href="#agendar" class="btn hero__btn">
+                        AGENDAR HORÁRIO
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="hero__features">
+                    <div class="feature">
+                        <i class="ri-user-line"></i>
+                        <span>Profissionais<br>experientes</span>
+                    </div>
+
+                    <div class="feature">
+                        <i class="ri-shield-check-line"></i>
+                        <span>Ambiente seguro<br>e confortável</span>
+                    </div>
+
+                    <div class="feature">
+                        <i class="ri-star-line"></i>
+                        <span>Qualidade<br>em cada detalhe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image">
+                <img src="assets/images/hero-barber.png" alt="Barbeiro cortando o cabelo de um cliente">
+            </div>
+        </section>
+    </main>
+
+    <main>
+
+        <section class="services" id="servicos">
+
+            <div class="services__header">
+
+                <p class="eyebrow">
+                    NOSSOS SERVIÇOS
+                </p>
+
+                <h2>
+                    Cuidado em cada detalhe.
+                </h2>
+
+                <p class="services__description">
+                    Serviços pensados para realçar o seu estilo,
+                    com profissionais especializados e produtos
+                    de alta qualidade.
+                </p>
+
+            </div>
+
+            <div class="services__grid">
+
+                <article class="service-card">
+                    <div class="service-card__image">
+                        <img src="assets/images/corte-moderno-franja.png" alt="Corte de cabelo">
+                    </div>
+
+                    <div class="service-card__content">
+                        <h3>Corte tradicional</h3>
+
+                        <p>
+                            Corte personalizado de acordo com seu estilo.
+                        </p>
+
+                        <div class="service-card__info">
+                            <span>30 min</span>
+                            <strong>R$ 50,00</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                                        <div class="service-card__image">
+                        <img src="assets/images/corte-degrade-moderno.png" alt="Corte de cabelo">
+                    </div>
+
+                    <div class="service-card__content">
+                        <h3>Degradê</h3>
+
+                        <p>
+                            Transição suave e moderna para um visual mais alinhado.
+                        </p>
+
+                        <div class="service-card__info">
+                            <span>40 min</span>
+                            <strong>R$ 70,00</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                                        <div class="service-card__image">
+                        <img src="assets/images/barba-completa-alinhada.png" alt="Corte de cabelo">
+                    </div>
+
+                    <div class="service-card__content">
+                        <h3>Barba</h3>
+
+                        <p>
+                            Modelagem e alinhamento para uma barba bem cuidada.
+                        </p>
+
+                        <div class="service-card__info">
+                            <span>30 min</span>
+                            <strong>R$ 45,00</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                                        <div class="service-card__image">
+                        <img src="assets/images/corte-e-barba-completo.png" alt="Corte de cabelo">
+                    </div>
+
+                    <div class="service-card__content">
+                        <h3>Cabelo + Barba</h3>
+
+                        <p>
+                            O combo completo para um visual impecável.
+                        </p>
+
+                        <div class="service-card__info">
+                            <span>60 min</span>
+                            <strong>R$ 90,00</strong>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
 
     <script src="js/script.js"></script>
 </body>
