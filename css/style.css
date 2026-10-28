@@ -1,3 +1,7 @@
+/* ==========================================
+   1. IMPORTAÇÃO DE FONTES E VARIÁVEIS GLOBAIS
+========================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -40,9 +44,9 @@ img {
     max-width: 100%;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ==========================================
+   2. NAVBAR (CABEÇALHO DE NAVEGAÇÃO)
+========================================== */
 
 .navbar {
     position: relative;
@@ -147,9 +151,9 @@ img {
     font-weight: 600;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ==========================================
+   SEÇÃO HERO (DESTAQUE INICIAL)
+========================================== */
 
 .hero {
     width: calc(100% - 32px);
@@ -214,10 +218,6 @@ img {
     font-size: 1rem;
 }
 
-/* =========================
-   DIFERENCIAIS
-========================= */
-
 .hero__features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -251,10 +251,6 @@ img {
     line-height: 1.45;
 }
 
-/* =========================
-   IMAGEM
-========================= */
-
 .hero__image {
     position: relative;
     min-width: 0;
@@ -279,9 +275,9 @@ img {
     object-position: center center;
 }
 
-/* =========================
-   SERVIÇOS
-========================= */
+/* ==========================================
+   SEÇÃO DE SERVIÇOS (CATÁLOGO)
+========================================== */
 
 .services {
     width: calc(100% - 32px);
@@ -297,10 +293,6 @@ img {
 
     overflow: hidden;
 }
-
-/* =========================
-   CABEÇALHO
-========================= */
 
 .services__header {
     max-width: 700px;
@@ -334,10 +326,6 @@ img {
     line-height: 1.7;
 }
 
-/* =========================
-   GRID DOS SERVIÇOS
-========================= */
-
 .services__grid {
     width: 100%;
 
@@ -345,10 +333,6 @@ img {
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
 }
-
-/* =========================
-   CARD
-========================= */
 
 .service-card {
     min-height: 190px;
@@ -368,10 +352,6 @@ img {
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
-
-/* =========================
-   IMAGEM DO CARD
-========================= */
 
 .service-card__image {
     width: 100%;
@@ -395,10 +375,6 @@ img {
     transform: scale(1.04);
 }
 
-/* =========================
-   CONTEÚDO
-========================= */
-
 .service-card__content {
     padding: 20px 20px 18px;
 }
@@ -420,10 +396,6 @@ img {
     font-size: 0.72rem;
     line-height: 1.6;
 }
-
-/* =========================
-   DURAÇÃO + PREÇO
-========================= */
 
 .service-card__info {
     padding-top: 14px;
@@ -447,9 +419,9 @@ img {
     font-weight: 700;
 }
 
-/* =========================
-   AGENDA
-========================= */
+/* ==========================================
+   SEÇÃO DE AGENDA E FORMULÁRIO (INTERATIVO)
+========================================== */
 
 .booking {
     width: calc(100% - 32px);
@@ -465,10 +437,6 @@ img {
 
     overflow: hidden;
 }
-
-/* =========================
-   CABEÇALHO
-========================= */
 
 .booking__header {
     max-width: 700px;
@@ -502,10 +470,6 @@ img {
     line-height: 1.7;
 }
 
-/* =========================
-   GRID PAI
-========================= */
-
 .booking__wrapper {
     width: 100%;
     display: flex;
@@ -513,20 +477,12 @@ img {
     align-items: flex-start;
 }
 
-/* =========================
-   GRID DOS SERVIÇOS
-========================= */
-
 .booking__grid {
     width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
-
-/* =========================
-   CARD
-========================= */
 
 .booking-card {
     cursor: pointer;
@@ -551,10 +507,6 @@ img {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================
-   IMAGEM DO CARD
-========================= */
-
 .booking-card__image {
     width: 100%;
     height: 190px;
@@ -577,10 +529,6 @@ img {
     transform: scale(1.04);
 }
 
-/* =========================
-   CONTEÚDO
-========================= */
-
 .booking-card__content {
     padding: 20px 20px 18px;
 }
@@ -593,10 +541,6 @@ img {
     line-height: 1.2;
     font-weight: 700;
 }
-
-/* =========================
-   DURAÇÃO + PREÇO
-========================= */
 
 .booking-card__info {
     padding-top: 14px;
@@ -620,10 +564,6 @@ img {
     font-weight: 700;
 }
 
-/* =========================
-   GRID DO FORMS
-========================= */
-
 .form__grid {
     width: 50%;
     background-color: var(--white);
@@ -639,10 +579,6 @@ img {
     flex-direction: column;
     gap: 20px;
 }
-
-/* =========================
-   CONTEÚDO
-========================= */
 
 .booking-details {
     display: flex;
@@ -736,9 +672,9 @@ img {
     background: #2a2a2a;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* ==========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================================== */
 
 @media (max-width: 1000px) {
 
