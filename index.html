@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="nav__header">
             <div class="nav__logo">
@@ -124,7 +125,7 @@
                 </article>
 
                 <article class="service-card">
-                                        <div class="service-card__image">
+                    <div class="service-card__image">
                         <img src="assets/images/corte-degrade-moderno.png" alt="Corte de cabelo">
                     </div>
 
@@ -143,7 +144,7 @@
                 </article>
 
                 <article class="service-card">
-                                        <div class="service-card__image">
+                    <div class="service-card__image">
                         <img src="assets/images/barba-completa-alinhada.png" alt="Corte de cabelo">
                     </div>
 
@@ -162,7 +163,7 @@
                 </article>
 
                 <article class="service-card">
-                                        <div class="service-card__image">
+                    <div class="service-card__image">
                         <img src="assets/images/corte-e-barba-completo.png" alt="Corte de cabelo">
                     </div>
 
@@ -186,6 +187,151 @@
 
     </main>
 
+    <main>
+
+        <section class="booking" id="agendar">
+
+            <div class="booking__header">
+
+                <p class="eyebrow">
+                    AGENDAR HORÁRIO
+                </p>
+
+                <h2>
+                    Escolha o serviço e o melhor horário para você.
+                </h2>
+
+                <p class="booking__description">
+                    Em poucos cliques você garante
+                    seu horário e cuida do seu visual.
+                </p>
+
+            </div>
+
+            <div class="booking__wrapper">
+
+                <div class="booking__grid">
+
+                    <label class="booking-card">
+                        <input type="checkbox" name="servico" id="servico-1" class="booking-card__checkbox" data-price="50">
+
+                        <div class="booking-card__image">
+                            <img src="assets/images/corte-moderno-franja.png" alt="Corte de cabelo">
+                        </div>
+
+                        <div class="booking-card__content">
+                            <h3>Corte tradicional</h3>
+
+                            <div class="booking-card__info">
+                                <span>30 min</span>
+                                <strong>R$ 50,00</strong>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="booking-card">
+                        <input type="checkbox" name="servico" id="servico-2" class="booking-card__checkbox" data-price="70">
+
+                        <div class="booking-card__image">
+                            <img src="assets/images/corte-degrade-moderno.png" alt="Corte de cabelo">
+                        </div>
+
+                        <div class="booking-card__content">
+                            <h3>Degradê</h3>
+
+                            <div class="booking-card__info">
+                                <span>40 min</span>
+                                <strong>R$ 70,00</strong>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="booking-card">
+                        <input type="checkbox" name="servico" id="servico-3" class="booking-card__checkbox" data-price="45">
+
+                        <div class="booking-card__image">
+                            <img src="assets/images/barba-completa-alinhada.png" alt="Corte de cabelo">
+                        </div>
+
+                        <div class="booking-card__content">
+                            <h3>Barba</h3>
+
+                            <div class="booking-card__info">
+                                <span>30 min</span>
+                                <strong>R$ 45,00</strong>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="booking-card">
+                        <input type="checkbox" name="servico" id="servico-4" class="booking-card__checkbox" data-price="90">
+
+                        <div class="booking-card__image">
+                            <img src="assets/images/corte-e-barba-completo.png" alt="Corte de cabelo">
+                        </div>
+
+                        <div class="booking-card__content">
+                            <h3>Cabelo + Barba</h3>
+
+                            <div class="booking-card__info">
+                                <span>60 min</span>
+                                <strong>R$ 90,00</strong>
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+
+                <div class="form__grid">
+                    <form action="#">
+                        <div class="booking-details">
+
+                            <div class="input-box">
+                                <div class="input-label">
+                                    <i class="ri-user-line"></i>
+                                    <span class="details">Barbeiro</span>
+                                </div>
+                                <select name="barbeiro" required class="input-select">
+                                    <option value="" disabled selected>A ser selecionado</option>
+                                    <option value="joao">João</option>
+                                    <option value="pedro">Pedro</option>
+                                    <option value="marcos">Marcos</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-label">
+                                    <i class="ri-calendar-line"></i>
+                                    <span class="details">Data</span>
+                                </div>
+                                <input type="date">
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-label">
+                                    <i class="ri-time-line"></i>
+                                    <span class="details">Horário</span>
+                                </div>
+                                <input type="time">
+                            </div>
+
+                        </div> 
+
+                        <div class="booking-card__info total-box">
+                            <strong>Total</strong>
+                            <strong id="total-value">R$ 0,00</strong>
+                        </div>
+
+                        <button type="submit" id="btn-proximo" class="btn btn__submit">
+                            PRÓXIMO PASSO <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
 
     <script src="js/script.js"></script>
 </body>

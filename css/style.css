@@ -448,6 +448,295 @@ img {
 }
 
 /* =========================
+   AGENDA
+========================= */
+
+.booking {
+    width: calc(100% - 32px);
+    min-height: calc(100vh - 84px);
+    margin: 0 auto 24px;
+
+    padding: 70px 58px 50px;
+
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+
+    overflow: hidden;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.booking__header {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.booking__header .eyebrow {
+    margin-bottom: 16px;
+
+    color: #8b8b8b;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 2.8px;
+}
+
+.booking__header h2 {
+    margin-bottom: 18px;
+
+    color: var(--text-dark);
+    font-size: clamp(3rem, 5vw, 2rem);
+    line-height: 1;
+    letter-spacing: -2.5px;
+    font-weight: 600;
+}
+
+.booking__description {
+    max-width: 590px;
+
+    color: #686868;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   GRID PAI
+========================= */
+
+.booking__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+/* =========================
+   GRID DOS SERVIÇOS
+========================= */
+
+.booking__grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.booking-card {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.booking-card__checkbox {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+    accent-color: var(--text-dark);
+    cursor: pointer;
+}
+
+.booking-card:has(.booking-card__checkbox:checked) {
+    border-color: var(--text-dark);
+    background-color: #faf9f6;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   IMAGEM DO CARD
+========================= */
+
+.booking-card__image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.booking-card__image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.booking-card:hover .booking-card__image img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.booking-card__content {
+    padding: 20px 20px 18px;
+}
+
+.booking-card__content h3 {
+    margin-bottom: 8px;
+
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* =========================
+   DURAÇÃO + PREÇO
+========================= */
+
+.booking-card__info {
+    padding-top: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--border);
+}
+
+.booking-card__info span {
+    color: #888888;
+    font-size: 0.68rem;
+    font-weight: 500;
+}
+
+.booking-card__info strong {
+    color: var(--text-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+/* =========================
+   GRID DO FORMS
+========================= */
+
+.form__grid {
+    width: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.form__grid form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.booking-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.input-box input,
+.input-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: var(--white);
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-box input:focus,
+.input-select:focus {
+    border-color: var(--text-dark);
+}
+
+.input-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.total-box {
+    padding: 16px 0;
+    margin-bottom: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-box strong {
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.btn__submit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: var(--text-dark);
+    color: var(--white);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn__submit:hover {
+    transform: translateY(-2px);
+    background: #2a2a2a;
+}
+
+/* =========================
    RESPONSIVO
 ========================= */
 
@@ -503,6 +792,15 @@ img {
 
     .service-card__image {
         height: 210px;
+    }
+
+    .booking__wrapper {
+        flex-direction: column;
+    }
+
+    .form__grid,
+    .booking__grid {
+        width: 100%;
     }
 }
 
