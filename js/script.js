@@ -115,3 +115,20 @@ bookingForm.addEventListener("submit", (event) => {
     // Mensagem de sucesso para o usuário
     alert("Agendamento guardado com sucesso!");
 });
+
+// validação extra no submit do formulário
+const dataInput = document.querySelector("input[type='date']").value;
+const horarioInput = document.querySelector("input[type='time']").value;
+
+// 1. Valida se a data é anterior a hoje
+const hoje = new Date().toISOString().split("T")[0];
+if (dataInput < hoje) {
+    alert("Você não pode agendar para uma data que já passou!");
+    return;
+}
+
+// 2. Valida se o horário está fora do expediente (das 08:00 às 20:00)
+if (horarioInput < "08:00" || horarioInput > "20:00") {
+    alert("Nosso horário de funcionamento é das 08:00 às 20:00.");
+    return;
+}
