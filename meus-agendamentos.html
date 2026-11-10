@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Gordao BarberShop - Meus Agendamentos</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">GORDÃO BARBERSHOP</a>
+            </div>
+
+            <button class="nav__menu__btn" id="menu-btn" aria-label="Abrir menu">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="index.html#servicos">SERVIÇOS</a></li>
+            <li><a href="index.html#agendar">AGENDAR</a></li>
+            <li><a href="meus-agendamentos.html">MEUS HORÁRIOS</a></li>
+            <li><a href="#perfil">PERFIL</a></li>
+            <li>
+                <a href="index.html#agendar" class="btn btn--small">AGENDAR AGORA</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="booking">
+            <div class="booking__header">
+                <p class="eyebrow">SUAS RESERVAS</p>
+                <h2>Meus Agendamentos</h2>
+                <p class="booking__description">
+                    Confira abaixo todos os horários que você garantiu com a gente na Gordao BarberShop.
+                </p>
+            </div>
+
+            <div id="lista-agendamentos" class="agendamentos__grid">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/meus-agendamentos.js"></script>
+</body>
+
+</html>
