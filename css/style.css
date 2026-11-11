@@ -738,6 +738,22 @@ img {
     .booking__grid {
         width: 100%;
     }
+
+    .booking {
+        padding: 50px 30px 40px; 
+    }
+
+    .booking__wrapper {
+        flex-direction: column; 
+        align-items: center;    
+    }
+
+    .booking__grid,
+    .form__grid {
+        width: 100%;          
+        max-width: 600px;      
+        margin: 0 auto;         
+    }
 }
 
 @media (max-width: 760px) {
@@ -838,6 +854,12 @@ img {
     .service-card__image {
         height: 230px;
     }
+
+    .booking__header h2,
+    .services__header h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        letter-spacing: -1px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -870,5 +892,9 @@ img {
     .hero__image {
         min-height: 330px;
         height: 330px;
+    }
+
+    .booking__grid {
+        grid-template-columns: 1fr; 
     }
 }
