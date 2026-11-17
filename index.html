@@ -29,9 +29,10 @@
             <li><a href="#servicos">SERVIÇOS</a></li>
             <li><a href="#agendar">AGENDAR</a></li>
             <li><a href="meus-agendamentos.html">MEUS HORÁRIOS</a></li>
-            <li><a href="#perfil">PERFIL</a></li>
+            <li><a href="login.html" data-auth="perfil">ENTRAR</a></li>
+            <li><a href="#" data-auth="sair" hidden>SAIR</a></li>
             <li>
-                <a href="#cadastro" class="btn btn--small">CADASTRAR-SE</a>
+                <a href="cadastro.html" data-auth="cadastro" class="btn btn--small">CADASTRAR-SE</a>
             </li>
         </ul>
     </nav>
@@ -213,7 +214,8 @@
                 <div class="booking__grid">
 
                     <label class="booking-card">
-                        <input type="checkbox" name="servico" id="servico-1" class="booking-card__checkbox" data-price="50">
+                        <input type="checkbox" name="servico" id="servico-1" class="booking-card__checkbox"
+                            data-price="50">
 
                         <div class="booking-card__image">
                             <img src="assets/images/corte-moderno-franja.png" alt="Corte de cabelo">
@@ -230,7 +232,8 @@
                     </label>
 
                     <label class="booking-card">
-                        <input type="checkbox" name="servico" id="servico-2" class="booking-card__checkbox" data-price="70">
+                        <input type="checkbox" name="servico" id="servico-2" class="booking-card__checkbox"
+                            data-price="70">
 
                         <div class="booking-card__image">
                             <img src="assets/images/corte-degrade-moderno.png" alt="Corte de cabelo">
@@ -247,7 +250,8 @@
                     </label>
 
                     <label class="booking-card">
-                        <input type="checkbox" name="servico" id="servico-3" class="booking-card__checkbox" data-price="45">
+                        <input type="checkbox" name="servico" id="servico-3" class="booking-card__checkbox"
+                            data-price="45">
 
                         <div class="booking-card__image">
                             <img src="assets/images/barba-completa-alinhada.png" alt="Corte de cabelo">
@@ -264,7 +268,8 @@
                     </label>
 
                     <label class="booking-card">
-                        <input type="checkbox" name="servico" id="servico-4" class="booking-card__checkbox" data-price="90">
+                        <input type="checkbox" name="servico" id="servico-4" class="booking-card__checkbox"
+                            data-price="90">
 
                         <div class="booking-card__image">
                             <img src="assets/images/corte-e-barba-completo.png" alt="Corte de cabelo">
@@ -312,10 +317,11 @@
                                     <i class="ri-time-line"></i>
                                     <span class="details">Horário</span>
                                 </div>
-                                <input type="time" id="horario_agendamento" min="08:00" max="20:00" step="1800" required>
+                                <input type="time" id="horario_agendamento" min="08:00" max="20:00" step="1800"
+                                    required>
                             </div>
 
-                        </div> 
+                        </div>
 
                         <div class="booking-card__info total-box">
                             <strong>Total</strong>
@@ -333,7 +339,9 @@
 
     </main>
 
-    <script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

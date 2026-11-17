@@ -29,9 +29,10 @@
             <li><a href="index.html#servicos">SERVIÇOS</a></li>
             <li><a href="index.html#agendar">AGENDAR</a></li>
             <li><a href="meus-agendamentos.html">MEUS HORÁRIOS</a></li>
-            <li><a href="#perfil">PERFIL</a></li>
+            <li><a href="login.html" data-auth="perfil">ENTRAR</a></li>
+            <li><a href="#" data-auth="sair" hidden>SAIR</a></li>
             <li>
-                <a href="#cadastro" class="btn btn--small">CADASTRAR-SE</a>
+                <a href="cadastro.html" data-auth="cadastro" class="btn btn--small">CADASTRAR-SE</a>
             </li>
         </ul>
     </nav>
@@ -51,6 +52,8 @@
         </section>
     </main>
 
+    <script src="js/auth.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/meus-agendamentos.js"></script>
 </body>
 

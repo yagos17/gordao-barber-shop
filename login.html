@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <title>Entrar | Gordão BarberShop</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav__header">
+            <div class="nav__logo"><a href="index.html">GORDÃO BARBERSHOP</a></div>
+        </div>
+        <ul class="nav__links">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="cadastro.html" data-auth="cadastro">CADASTRAR-SE</a></li>
+        </ul>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-card">
+            <p class="eyebrow">BEM-VINDO DE VOLTA</p>
+            <h1>Acesse sua conta.</h1>
+            <p class="auth-description">Entre para acompanhar seus horários na Gordão BarberShop.</p>
+
+            <form id="form-login" class="auth-form">
+                <div class="auth-field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="username" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Digite sua senha" required>
+                </div>
+
+                <p id="auth-message" class="auth-message" role="alert" hidden></p>
+
+                <button type="submit" class="btn auth-submit">ENTRAR <i class="ri-arrow-right-line"></i></button>
+            </form>
+
+            <p class="auth-switch">Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+            <details class="demo-access">
+                <summary>Contas de demonstração</summary>
+                <p><strong>Administrador:</strong> admin@gordao.com / Admin123</p>
+                <p><strong>Barbeiro João:</strong> joao@gordao.com / Joao123</p>
+                <p><strong>Barbeiro Pedro:</strong> pedro@gordao.com / Pedro123</p>
+                <p><strong>Barbeiro Marcos:</strong> marcos@gordao.com / Marcos123</p>
+            </details>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
